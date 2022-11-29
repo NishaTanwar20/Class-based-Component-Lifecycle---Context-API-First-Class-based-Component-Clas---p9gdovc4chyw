@@ -8,20 +8,21 @@ class App extends React.Component {
     super(props);
     this.state = {date: new Date()};
   }
-
+  
+  
   componentDidMount() {
-    this.timerID = setInterval(
-// write your code here
- 
-    );
+    // this.timerID = setInterval(
+    // write your code here
+    this.timerID = setInterval(this.tick, 1000); 
+    console.log(this.timerID);
   }
-
-  tick() {
+  tick = () => {
     this.setState({
       date: new Date()
     });
     
   }
+  
 
   render() {
     return (
